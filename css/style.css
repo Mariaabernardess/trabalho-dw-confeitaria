@@ -76,7 +76,6 @@ section {
 .grid-bolos,
 .grid-doces,
 .grid-tortas {
-    display: flex;
     align-items: start;
     justify-content: center;
     gap: 2vw;
@@ -168,66 +167,7 @@ img {
     height: 200px;
 }
 
-/* CSS para o Carrossel */
-.carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-item {
-    position: relative;
-    display: none;
-    width: 100%;
-    transition: opacity 1s ease-in-out;
-}
-
-.carousel-item.active {
-    display: block;
-    opacity: 1;
-}
-
-.carousel-fade .carousel-item {
-    opacity: 0;
-    transition: opacity 0.75s ease-in-out;
-}
-
-.carousel-fade .carousel-item.active {
-    opacity: 1;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 5%;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #fff;
-    border-radius: 50%;
-}
-
-.carousel-control-prev-icon {
-    background-image: url('path-to-your-prev-icon.svg');
-}
-
-.carousel-control-next-icon {
-    background-image: url('path-to-your-next-icon.svg');
-}
-
-/* Responsividade para dispositivos móveis */
-@media (max-width: 768px) {
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 10%;
-    }
-
-    .carousel-inner img {
-        height: auto;
-        max-height: 400px;
-    }
+.grid-receitas{
+    display: flex;
+    flex-wrap: wrap;
 }

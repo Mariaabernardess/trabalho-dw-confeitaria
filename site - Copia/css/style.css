@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fc8c8cd5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 15px;
+}
+
+/* Header */
+header {
+    background: #fc8b8b;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Seções */
+section {
+    padding: 60px 0;
+}
+
+#home {
+    background: url('../images/background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#bolos h2,
+#tortas h2,
+#doces h2,
+#sobre h2,
+#contato h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Grid Receitas */
+.grid-bolos,
+.grid-doces,
+.grid-tortas {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.receita {
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.receita img {
+    max-width: 50%;
+    height: auto;
+}
+
+.receita h3 {
+    margin: 10px 0;
+}
+
+/* Sobre */
+#sobre p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+button {
+    padding: 10px 20px;
+    background: #fc8b8b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #fc8b8b;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.bolos,
+.doces,
+.tortas {
+    background-color: #fc8b8b;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+#bolos img,
+#doces img,
+#tortas img {
+    height: 15vw;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: url("../imagens/Sweet_Dreams.png") no-repeat center center/cover;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+}
+
+/* CSS para o Carrossel */
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    width: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block;
+    opacity: 1;
+}
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('path-to-your-prev-icon.svg');
+}
+
+.carousel-control-next-icon {
+    background-image: url('path-to-your-next-icon.svg');
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
+
+    .carousel-inner img {
+        height: auto;
+        max-height: 400px;
+    }
+}
